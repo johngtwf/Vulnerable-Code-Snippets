@@ -8,6 +8,7 @@ const sequelize = new Sequelize('database', 'username', 'password', {
 });
 
 //This is a useless comment
+//Another useless comment
 app.post('/login', function (req, res) {
     sequelize.query('SELECT * FROM Products WHERE name LIKE ' +  req.body.username);
   })
