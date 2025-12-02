@@ -12,7 +12,7 @@ const connection = mysql.createConnection({
 });
  
 connection.connect();
-
+/*
 router.get('/example1/user/:id', (req,res) => {
     let userId = req.params.id;
     let query = {
@@ -22,7 +22,7 @@ router.get('/example1/user/:id', (req,res) => {
         res.json(result);
     });
 })
-
+*/
 router.get('/example2/user/:id',  (req,res) => {
     let userId = req.params.id;
     connection.query("SELECT * FROM users WHERE id=" + userId,(err, result) => {
